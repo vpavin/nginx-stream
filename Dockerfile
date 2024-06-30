@@ -1,8 +1,8 @@
-FROM debian:stretch
+FROM buildpack-deps:bullseye
 
 LABEL maintainer="Vinicius Pavin <vyper149@gmail.com>" 
 
-ARG NGINX_VERSION 1.27.0
+ARG NGINX_VERSION=1.27.0
 
 RUN apt-get update && apt-get -y upgrade && \
     apt-get install -y wget libpcre3-dev build-essential ca-certificates openssl libssl-dev zlib1g-dev && \
