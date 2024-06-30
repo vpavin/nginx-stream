@@ -30,7 +30,7 @@ stream {
     }
 
     server {
-        listen     8212     udp;
+        listen     8211     udp;
         #TCP traffic will be forwarded to the "stream_backend" upstream group
         proxy_pass stream_backend;
     }
@@ -45,7 +45,7 @@ Refer to [TCP and UDP Load Balacing](https://docs.nginx.com/nginx/admin-guide/lo
 After changing the configuration contents run:
 
 ```shell
-❯ docker run -v nginx.conf:/etc/nginx/nginx.conf -p 8212:8212 ghcr.io/vpavin/nginx-stream
+❯ docker run -v nginx.conf:/etc/nginx/nginx.conf -p 8211:8211 ghcr.io/vpavin/nginx-stream
 
 ```
 
