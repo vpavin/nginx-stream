@@ -42,8 +42,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 WORKDIR /
 
-USER nginx
-
 EXPOSE 80 443 8212
 
 CMD ["nginx", "-g", "daemon off;"]
